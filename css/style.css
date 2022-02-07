@@ -1,0 +1,144 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  display: flex;
+  font-family: 'Source Sans Pro', sans-serif;
+  min-height: 57rem;
+
+}
+body > aside {
+  background-image: url(../assets/beth-hope-RdPyf-yUz30-unsplash-640x960.jpg);
+  max-width: 535px;
+  width: 30%;
+}
+main {
+  background: rgb(249, 250, 251);
+  width: 70%;
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.band {
+  height: 150px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.band img {
+  height: 80%;
+}
+.band p {
+  font-family: 'Skranji', cursive;
+  font-size: 96px;
+  color: white;
+  margin: 0;
+}
+aside > p {
+  text-align: center;
+  margin: 540px 10px 0;
+}
+aside a {
+  color: black;
+}
+
+main > section:first-of-type {
+  min-height: 20rem;
+  padding: 75px 50px 75px;
+}
+
+main > section:first-of-type p, h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  max-width: 700px;
+}
+main > section:first-of-type p:last-of-type {
+  margin-top: 24px;
+}
+
+main > section:nth-of-type(2) {
+  background: white;
+  box-shadow: 0 3px 5px rgb(160, 160, 160);
+  padding: 20px 50px 30px;
+  min-height: 18rem;
+}
+form {  
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 10px;
+  row-gap: 10px;
+}
+form div {
+  flex: auto;
+  min-width: 40%;
+  padding-top: 10px;
+}
+label {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: rgb(56, 56, 56);
+}
+input {
+  max-width: 260px;
+  display: block;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+main > section:last-of-type {
+  min-height: 19rem;
+  padding: 30px 50px 0;
+}
+main > section:last-of-type button {
+  background: rgb(179, 160, 154);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  width: 220px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+}
+main > section:last-of-type a {
+  text-decoration: none;
+  color: rgb(155, 106, 92);
+  font-size: 18px;
+}
+main > section:last-of-type p {
+  font-size: 18px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
