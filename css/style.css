@@ -27,8 +27,9 @@ body {
   min-height: 57rem;
 
 }
-body > aside {
-  background-image: url(../assets/beth-hope-RdPyf-yUz30-unsplash-640x960.jpg);
+aside {
+  background: url(../assets/beth-hope-RdPyf-yUz30-unsplash-640x960.jpg), rgb(179, 160, 154);;
+  background-repeat: no-repeat;
   max-width: 535px;
   width: 30%;
 }
@@ -42,17 +43,24 @@ main {
 /******************************************
 /* LAYOUT
 /*******************************************/
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .band {
-  height: 150px;
+  min-height: 150px;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .band img {
-  height: 80%;
+  max-height: 130px;
+  margin: 10px;
 }
 .band p {
   font-family: 'Skranji', cursive;
@@ -61,8 +69,9 @@ main {
   margin: 0;
 }
 aside > p {
+  max-width: 80%;
+  align-self: center;
   text-align: center;
-  margin: 540px 10px 0;
 }
 aside a {
   color: black;
@@ -114,12 +123,20 @@ input {
   border: 1px solid lightgray;
   border-radius: 3px;
 }
+input:invalid {
+  border-color: red;
+}
+input:focus {
+  outline: 0;
+  border-color: blue;
+  box-shadow: 0 0 2px black;
+}
 
 main > section:last-of-type {
   min-height: 19rem;
   padding: 30px 50px 0;
 }
-main > section:last-of-type button {
+button {
   background: rgb(179, 160, 154);
   color: white;
   font-size: 18px;
@@ -128,6 +145,13 @@ main > section:last-of-type button {
   height: 50px;
   border: none;
   border-radius: 5px;
+  transition-duration: 0.2s;
+}
+button:hover {
+  background: rgb(104, 83, 76);
+}
+button:active {
+  transform: translate(0, 7px);
 }
 main > section:last-of-type a {
   text-decoration: none;
@@ -139,6 +163,38 @@ main > section:last-of-type p {
 }
 
 
+
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+@media screen and (max-width: 640px) {
+  body {
+    flex-direction: column;
+  }
+
+  aside {
+    height: 200px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .band {
+    margin-top: 25px;
+  }
+
+  aside > p {
+    display: none;
+  }
+  
+  main {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 349px) {
+  .band img {
+    display: none; 
+  }
+}
